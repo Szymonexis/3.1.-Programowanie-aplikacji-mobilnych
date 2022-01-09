@@ -62,6 +62,4 @@ public class MainActivity extends AppCompatActivity {
     private String nullCheck(String txt) {
         return txt.equals("") ? "0" : txt;
     }
-
-
 }
