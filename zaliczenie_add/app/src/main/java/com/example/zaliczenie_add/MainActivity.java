@@ -1,4 +1,4 @@
-package com.example.zaliczenieadd;
+package com.example.zaliczenie_add;
 
 import androidx.appcompat.app.AppCompatActivity;
 
