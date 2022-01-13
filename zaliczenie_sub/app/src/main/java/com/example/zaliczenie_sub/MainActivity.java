@@ -15,15 +15,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        showToast("Starting " + operation + " subactivity");
         Intent intent = getIntent();
         int[] data = intent.getIntArrayExtra("args");
         if(data == null) {
-            showToast("No arguments");
             finish();
             return;
         }
-        showToast("arguments: " + data[0] + ", " + data[1]);
         Intent result = new Intent();
         result.putExtra("operation", operation);
         result.putExtra("result", handle(data));
@@ -32,9 +29,5 @@ public class MainActivity extends AppCompatActivity {
     }
     private int handle(int[] data) {
         return data[0] - data[1];
-    }
-
-    private void showToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
